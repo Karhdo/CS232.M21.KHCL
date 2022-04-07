@@ -1,0 +1,41 @@
+,Title,Authors,Year
+0,Application and benchmarking of multi-objective evolutionary algorithms on high-dose-rate brachytherapy planning for prostate cancer treatment,"NH Luong, T Alderliesten, A Bel, Y Niatsetski, PAN Bosman",2017
+1,Expanding from discrete Cartesian to permutation gene-pool optimal mixing evolutionary algorithms,"PAN Bosman, NH Luong, D Thierens",2016
+2,Multi-objective gene-pool optimal mixing evolutionary algorithms,"NH Luong, H La Poutré, PAN Bosman",2014
+3,Multi-objective optimization techniques and applications in electric power systems,"MOW Grond, NH Luong, J Morren, JG Slootweg",2012
+4,Multi-objective gene-pool optimal mixing evolutionary algorithm with the interleaved multi-start scheme,"NH Luong, H La Poutré, PAN Bosman",2018
+5,Elitist archiving for multi-objective evolutionary algorithms: To adapt or not to adapt,"HN Luong, PAN Bosman",2012
+6,Practice-oriented optimization of distribution network planning using metaheuristic algorithms,"MOW Grond, HN Luong, J Morren, PAN Bosman, HJG Slootweg, ...",2014
+7,The multi-objective real-valued gene-pool optimal mixing evolutionary algorithm,"A Bouter, NH Luong, C Witteveen, T Alderliesten, PAN Bosman",2017
+8,Entropy-based efficiency enhancement techniques for evolutionary algorithms,"HN Luong, HTT Nguyen, CW Ahn",2012
+9,Evaluation of bi-objective treatment planning for high-dose-rate prostate brachytherapy—A retrospective observer study,"SC Maree, NH Luong, ES Kooreman, N van Wieringen, A Bel, KA Hinnen, ...",2019
+10,Exploiting Linkage Information and Problem-Specific Knowledge in Evolutionary Distribution Network Expansion Planning,"NH Luong, H La Poutré, PAN Bosman",2018
+11,Exploiting linkage information and problem-specific knowledge in evolutionary distribution network expansion planning,"NH Luong, H La Poutré, PAN Bosman",2015
+12,"Exploring trade-offs between target coverage, healthy tissue sparing, and the placement of catheters in HDR brachytherapy for prostate cancer using a novel multi-objective …","KL Sadowski, MC van der Meer, NH Luong, T Alderliesten, D Thierens, ...",2017
+13,Scalable and practical multi-objective distribution network expansion planning,"NH Luong, MOW Grond, H La Poutré, PAN Bosman",2015
+14,Medium-voltage distribution network expansion planning with gene-pool optimal mixing evolutionary algorithms,"HN Luong, MOW Grond, PAN Bosman, HL Poutré",2013
+15,Fine-tuning bert for sentiment analysis of vietnamese reviews,"QT Nguyen, TL Nguyen, NH Luong, QH Ngo",2020
+16,"Efficient, effective, and insightful tackling of the high-dose-rate brachytherapy treatment planning problem for prostate cancer using evolutionary multi-objective optimization …","NH Luong, A Bouter, MC Van Der Meer, Y Niatsetski, C Witteveen, A Bel, ...",2017
+17,Fast and insightful bi-objective optimization for prostate cancer treatment planning with high-dose-rate brachytherapy,"NH Luong, T Alderliesten, BR Pieters, A Bel, Y Niatsetski, PAN Bosman",2019
+18,Heuristics in permutation gomea for solving the permutation flowshop scheduling problem,"GH Aalvanger, NH Luong, PAN Bosman, D Thierens",2018
+19,Entropy-based substructural local search for the Bayesian optimization algorithm,"HN Luong, HTT Nguyen, CW Ahn",2010
+20,Improving the performance of MO-RV-GOMEA on problems with many objectives using tchebycheff scalarizations,"NH Luong, T Alderliesten, PAN Bosman",2018
+21,Fast and insightful bi-objective HDR prostate brachytherapy planning,"NH Luong, T Alderliesten, BR Pieters, A Bel, Y Niatsetski, PAN Bosman",2018
+22,A novel differential evolution using multiple-deme based mutation,"DH Lim, HN Luong, CW Ahn",2012
+23,Entropy-based evaluation relaxation strategy for Bayesian optimization algorithm,"HN Luong, HTT Nguyen, CW Ahn",2010
+24,A novel differential evolution incorporated with parallel processing mechanism,"DH Lim, HN Luong, CW Ahn",2010
+25,Training-Free Multi-objective Evolutionary Neural Architecture Search via Neural Tangent Kernel and Number of Linear Regions,"T Do, NH Luong",2021
+26,Insightful and practical multi-objective convolutional neural network architecture search with evolutionary algorithms,"T Do, NH Luong",2021
+27,Enhancing Multi-objective Evolutionary Neural Architecture Search with Surrogate Models and Potential Point-Guided Local Searches,"QM Phan, NH Luong",2021
+28,Distribution system,"NC Koutsoukis, PS Georgilakis, ND Hatziargyriou, O Mohammed, ...",2020
+29,PO-1020: better plans and easy plan selection via bi-objective optimization for HDR prostate brachytherapy,"SC Maree, ES Kooreman, NH Luong, N Van Wieringen, A Bel, ...",2018
+30,Efficiency enhancements for evolutionary capacity planning in distribution grids,"NH Luong, MOW Grond, H La Poutré, PAN Bosman",2014
+31,An entropy approach to evaluation relaxation for Bayesian optimization algorithm,"HTT Nguyen, HN Luong, CW Ahn",2012
+32,"On the Impact of Linkage Learning, Gene-pool Optimal Mixing, and non-Redundant Encoding on Permutation Optimization","A Guijt, NH Luong, PAN Bosman, M de Weerdt",2022
+33,Enhancing Twin Delayed Deep Deterministic Policy Gradient with Cross-Entropy Method,"HT Nguyen, K Tran, NH Luong",2021
+34,Efficiency Enhancement of Evolutionary Neural Architecture Search via Training-Free Initialization,"QM Phan, NH Luong",2021
+35,Hybrid linkage learning for permutation optimization with Gene-pool optimal mixing evolutionary algorithms,"MW Przewozniczek, MM Komarnicki, PAN Bosman, D Thierens, B Frej, ...",2021
+36,Applying Deep Reinforcement Learning in Automated Stock Trading,"HT Nguyen, NH Luong",2021
+37,Design and Application of Scalable Evolutionary Algorithms in Electricity Distribution Network Expansion Planning,NH Luong,2018
+38,Entropy measurement-based estimation model for bayesian optimization algorithm,"HTT Nguyen, HN Luong, CW Ahn",2010
+39,Swarm and Evolutionary Computation,"A Guijt, NH Luong, PAN Bosman, M de Weerdt",

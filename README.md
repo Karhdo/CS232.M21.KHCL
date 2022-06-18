@@ -34,7 +34,7 @@
       git clone https://github.com/Karhdo/CS232.M21.KHCL.git
       cd CS232.M21.KHCL
       npm install
-      npm run build or npm run dev
+      npm run build
     ```
 
     <h3 align="center">

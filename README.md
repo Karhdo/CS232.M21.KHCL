@@ -36,4 +36,7 @@
     cd CS232.M21.KHCL
     npm install
     npm run build or npm run dev
-    `
+    ```
+<h3 align="center">
+  <a href="">DEMO</a>
+</h3>

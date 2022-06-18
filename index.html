@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Demo</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+            integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="./css/styles.css" />
+    </head>
+    <body>
+        <nav>
+            <label class="logo">Text Compression</label>
+            <!-- <ul>
+                <li><a class="active" href="">Home</a></li>
+                <li><a href="/product">Manage</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+            </ul> -->
+        </nav>
+        <div class="container">
+            <form class="dataform" onsubmit="formSubmit(); return false;">
+                <div class="algorithm-area">
+                    <label for="input_algorithm">Chooses algorithm for text compression: </label>
+                    <select name="algorithm" id="algorithm">
+                        <option value="huffman">HUFFMAN</option>
+                        <option value="shanon-fano">SHANON-FANO</option>
+                    </select>
+                </div>
+                <textarea id="text" rows="10" placeholder="Enter your text here or Upload file .txt."></textarea>
+                <input type="file" hidden />
+                <div class="btn-area">
+                    <button type="button" class="btn btn-encode">Encode</button>
+                    <button type="button" class="btn btn-decode">Decode</button>
+                    <button type="button" class="btn btn-upload">Upload</button>
+                </div>
+            </form>
+            <div class="conversion-table">
+                <p>Conversion Table</p>
+                <table></table>
+            </div>
+        </div>
+        <script src="./library/jquery-3.6.0.min.js"></script>
+        <script src="./library/system.js"></script>
+
+        <script type="text/javascript">
+            System.defaultJSExtensions = true;
+            System.import("./js/index.js");
+        </script>
+    </body>
+</html>

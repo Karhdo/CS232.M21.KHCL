@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #f8f8f8;
+}
+
+table,
+th,
+td {
+    border-collapse: collapse;
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: center;
+}
+
+h1 {
+    color: black;
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin: 0 0 0.5rem 0;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-weight: 500;
+    color: #2b3853;
+}
+
+h4 {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 1rem;
+    font-weight: 300;
+    text-align: center;
+    margin: 0 0 3.5rem 0;
+}
+
+nav {
+    background-color: #2b3853;
+    height: 80px;
+    width: 100%;
+}
+
+label.logo {
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+
+nav ul {
+    float: right;
+    margin-right: 48px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: #fff;
+    font-size: 17px;
+    padding: 8px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+a.active,
+a:hover {
+    background-color: #fff;
+    color: #454cad;
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+.container {
+    margin: 100px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.container .algorithm-area {
+    margin-bottom: 12px;
+}
+
+.container .algorithm-area label {
+    font-weight: 500;
+    color: #2b3853;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.container .algorithm-area select {
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 18px;
+    background-color: #f8f8f8;
+    color: #2b3853;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    font-weight: 500;
+}
+
+.container #text {
+    font-size: 16px;
+    min-width: 700px;
+    max-width: 700px;
+    padding: 8px;
+    outline: #2b3853;
+    border-radius: 4px;
+}
+
+.container #text.active {
+    border: 2px solid #2b3853;
+}
+
+.container #text:focus {
+    outline: none;
+    border: 2px solid #2b3853;
+    border-radius: 4px;
+}
+
+.container .btn {
+    background-color: #2b3853;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;
+}
+
+.container .btn:hover {
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.conversion-table {
+    margin-left: 40px;
+    display: none;
+}
+
+.conversion-table p {
+    color: #2b3853;
+    font-size: 18px;
+    font-weight: 500;
+    padding-bottom: 12px;
+}

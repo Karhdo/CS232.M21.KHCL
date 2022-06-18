@@ -31,12 +31,15 @@
     -   Thuật toán **Shannon Fano** là một kỹ thuật mã hóa entropy để nén dữ liệu không mất mát của tính toán đa phương tiện.
 -   **Hướng dẫn cài đặt**
 
-    ```bash
-    git clone https://github.com/Karhdo/CS232.M21.KHCL.git
-    cd CS232.M21.KHCL
-    npm install
-    npm run build or npm run dev
-    ```
-<h3 align="center">
-  <a href="">DEMO</a>
-</h3>
+            ```bash
+            git clone https://github.com/Karhdo/CS232.M21.KHCL.git
+            cd CS232.M21.KHCL
+            npm install
+            npm run build or npm run dev
+            ```
+
+    <h3 align="center">
+        <a href="">DEMO</a>
+    </h3>
+
+    <img align="center" src="./img/demo.png">

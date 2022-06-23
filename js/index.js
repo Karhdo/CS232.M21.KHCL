@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const huffman = require("./huffman");
+const lzw = require("./lzw");
 const textArea = $("#text");
 const selectInput = $("#algorithm");
 const btnEncode = $(".btn-encode");
@@ -40,12 +41,21 @@ btnEncode.on("click", () => {
             text = String(textArea.val());
             codes = huffman.getCodesFromText(text); // Symbols codes
             encodedArray = huffman.encode(text, codes); // Get array of encoded symbols
-            let encodedText = encodedArray.join("");
+            var encodedText = encodedArray.join("");
             textArea.val(encodedText);
-            showConversionTable(text);
+            showConversionTableOfHuffman(text);
             break;
-        case "shanon-fano":
-            console.log("Shanon-fano .....");
+        case "lzw":
+            text = String(textArea.val());
+            var { output, dict, input, next } = lzw.lzw_encode(text);
+            // var encodedText = output.join("");
+            var encodedTextLZW = output
+                .map((outputElement) => {
+                return outputElement.charOutput;
+            })
+                .join("");
+            textArea.val(encodedTextLZW);
+            showConversionTableOfLZW(dict, input, output, next);
             break;
     }
 });
@@ -60,12 +70,14 @@ btnDecode.on("click", () => {
             text = huffman.decode(encodedArray, codes);
             textArea.val(text);
             break;
-        case "shanon-fano":
-            console.log("Shanon-fano .....");
+        case "lzw":
+            text = String(textArea.val());
+            let decodeText = lzw.lzw_decode(text);
+            textArea.val(decodeText);
             break;
     }
 });
-const showConversionTable = (text) => {
+const showConversionTableOfHuffman = (text) => {
     let frequencyArr = huffman.getFrequency(text);
     let codes = huffman.getCodesFromText(text);
     let html = "<tr><th>Character</th><th>Frequency</th><th>Code</th></tr>";
@@ -78,6 +90,32 @@ const showConversionTable = (text) => {
                     </tr>
         `;
     }
+    $(".conversion-table").show();
+    $(".conversion-table table").empty();
+    $(".conversion-table table").append(html);
+};
+const showConversionTableOfLZW = (dict, input, output, next) => {
+    let html = "<tr><th>Input</th><th>Output</th><th>Next</th><th>Dictionnary</th></tr>";
+    var i = 0;
+    for (const [key, value] of Object.entries(dict)) {
+        html += `
+                    <tr>
+                        <td>${input[i].charInput}: ${input[i].code}</td>
+                        <td>${output[i].charOutput}: ${output[i].code}</td>
+                        <td>${next[i]}</td>
+                        <td>${key}: ${value}</td>
+                    </tr>
+        `;
+        i++;
+    }
+    html += `
+                <tr>
+                    <td>${input[i].charInput}: ${input[i].code}</td>
+                    <td>${output[i].charOutput}: ${output[i].code}</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+    `;
     $(".conversion-table").show();
     $(".conversion-table table").empty();
     $(".conversion-table table").append(html);

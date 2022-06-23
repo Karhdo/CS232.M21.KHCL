@@ -1,4 +1,5 @@
 import * as huffman from "./huffman";
+import * as lzw from "./lzw";
 
 const textArea = $("#text");
 const selectInput = $("#algorithm");
@@ -50,13 +51,26 @@ btnEncode.on("click", () => {
             codes = huffman.getCodesFromText(text); // Symbols codes
             encodedArray = huffman.encode(text, codes); // Get array of encoded symbols
 
-            let encodedText: string = encodedArray.join("");
+            var encodedText: string = encodedArray.join("");
             textArea.val(encodedText);
-            showConversionTable(text);
+            showConversionTableOfHuffman(text);
 
             break;
-        case "shanon-fano":
-            console.log("Shanon-fano .....");
+        case "lzw":
+            text = String(textArea.val());
+
+            var { output, dict, input, next } = lzw.lzw_encode(text);
+
+            // var encodedText = output.join("");
+
+            var encodedTextLZW: any = output
+                .map((outputElement: lzw.outputString) => {
+                    return outputElement.charOutput;
+                })
+                .join("");
+            textArea.val(encodedTextLZW);
+
+            showConversionTableOfLZW(dict, input, output, next);
             break;
     }
 });
@@ -74,13 +88,15 @@ btnDecode.on("click", () => {
             textArea.val(text);
 
             break;
-        case "shanon-fano":
-            console.log("Shanon-fano .....");
+        case "lzw":
+            text = String(textArea.val());
+            let decodeText = lzw.lzw_decode(text);
+            textArea.val(decodeText);
             break;
     }
 });
 
-const showConversionTable = (text: string) => {
+const showConversionTableOfHuffman = (text: string) => {
     let frequencyArr: [string, number][] = huffman.getFrequency(text);
     let codes: Map<string, string> = huffman.getCodesFromText(text);
     let html: string = "<tr><th>Character</th><th>Frequency</th><th>Code</th></tr>";
@@ -95,6 +111,34 @@ const showConversionTable = (text: string) => {
         `;
     }
 
+    $(".conversion-table").show();
+    $(".conversion-table table").empty();
+    $(".conversion-table table").append(html);
+};
+
+const showConversionTableOfLZW = (dict: Object, input: Array<lzw.inputString>, output: Array<lzw.outputString>, next: Array<string>) => {
+    let html: string = "<tr><th>Input</th><th>Output</th><th>Next</th><th>Dictionnary</th></tr>";
+    var i = 0;
+    for (const [key, value] of Object.entries(dict)) {
+        html += `
+                    <tr>
+                        <td>${input[i].charInput}: ${input[i].code}</td>
+                        <td>${output[i].charOutput}: ${output[i].code}</td>
+                        <td>${next[i]}</td>
+                        <td>${key}: ${value}</td>
+                    </tr>
+        `;
+        i++;
+    }
+
+    html += `
+                <tr>
+                    <td>${input[i].charInput}: ${input[i].code}</td>
+                    <td>${output[i].charOutput}: ${output[i].code}</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+    `;
     $(".conversion-table").show();
     $(".conversion-table table").empty();
     $(".conversion-table table").append(html);

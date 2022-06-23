@@ -27,16 +27,6 @@ export function decode(text: Array<string>, codes: Map<string, string>): string 
     return result;
 }
 
-/** GET ENTROPY */
-export function getEntropyOfText(text: string): number {
-    const relFreq: Array<any> = getRelativeFrequency(getFrequency(text));
-    let entropy = 0;
-    for (let i = 0; i < relFreq.length; i++) {
-        entropy += relFreq[i][1] * Math.log2(relFreq[i][1]);
-    }
-    return -entropy;
-}
-
 /** GET SYMBOLS CODES FROM TEXT */
 export function getCodesFromText(text: string): Map<string, string> {
     const frequencyArr = getFrequency(text);
@@ -50,21 +40,6 @@ export function getCodesFromText(text: string): Map<string, string> {
     });
 
     return codes;
-}
-
-//** GET RELATIVE FREQUENCY */
-export function getRelativeFrequency(arr: Array<any>): Array<any> {
-    let length = 0;
-    const resArr: Array<any> = [];
-    for (let i = 0; i < arr.length; i++) {
-        length += arr[i][1];
-    }
-    for (let i = 0; i < arr.length; i++) {
-        const relFreq = arr[i][1] / length;
-        resArr.push([arr[i][0], relFreq]);
-    }
-
-    return resArr;
 }
 
 /** GET CODE FOR SYMBOL */
